@@ -1,0 +1,29 @@
+[versions]
+activity-ktx = "1.9.3"
+android-gradle-plugin = "8.7.2"
+appcompat = "1.7.0"
+# 1.4.0 is missing the proper proguard rules for MapWithContentTemplate, causing the default
+# constructor to be removed (which is called by reflection).
+car = "1.7.0-beta03"
+core-ktx = "1.15.0"
+jgit = "7.0.0.202409031743-r"
+fragment-ktx = "1.8.5"
+kotlin = "2.0.21"
+material = "1.12.0"
+preference-ktx = "1.2.1"
+
+[libraries]
+activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity-ktx" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+car = { group = "androidx.car.app", name = "app", version.ref = "car" }
+car-projected = { group = "androidx.car.app", name = "app-projected", version.ref = "car" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment-ktx" }
+jgit = { group = "org.eclipse.jgit", name = "org.eclipse.jgit", version.ref = "jgit" }
+jgit-archive = { group = "org.eclipse.jgit", name = "org.eclipse.jgit.archive", version.ref = "jgit" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+preference-ktx = { group = "androidx.preference", name = "preference-ktx", version.ref = "preference-ktx" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

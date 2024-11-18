@@ -1,0 +1,48 @@
+<!--
+    SPDX-FileCopyrightText: 2024 Andrew Gunnerson
+    SPDX-License-Identifier: GPL-3.0-only
+-->
+<resources>
+    <!-- Preference headers -->
+    <string name="pref_header_permissions">Permissions</string>
+    <string name="pref_header_behavior">Behavior</string>
+    <string name="pref_header_about">About</string>
+    <string name="pref_header_debug">Debug</string>
+
+    <!-- Main preferences -->
+    <string name="pref_missing_notifications_name">Missing notifications permission</string>
+    <string name="pref_missing_notifications_desc">Needed to keep screen mirroring process alive in a foreground service.</string>
+    <string name="pref_missing_speed_name">Missing vehicle speed permission</string>
+    <string name="pref_missing_speed_desc">Needed to stop screen mirroring when driving. Android may show this as a location request, but MirrorMobile receives no information besides the vehicle speed.</string>
+    <string name="pref_auto_start_name">Start mirroring automatically</string>
+    <string name="pref_auto_start_desc">Immediately request screen mirroring permissions when opening the app in Android Auto.</string>
+    <string name="pref_wake_lock_name">Keep screen on</string>
+    <string name="pref_wake_lock_desc">Prevent the screen from turning off while mirroring is active. The screen will still dim when idle.</string>
+    <string name="pref_version_name">Version</string>
+    <string name="pref_save_logs_name">Save logs</string>
+    <string name="pref_save_logs_desc">Save logcat logs to a file.</string>
+
+    <!-- Main alerts -->
+    <string name="alert_logcat_success">Successfully saved logs to %1$s</string>
+    <string name="alert_logcat_failure">Failed to save logs to %1$s: %2$s</string>
+
+    <!-- Mirror screen -->
+    <string name="mirror_bottom_unavailable">…</string>
+    <string name="mirror_button_start">Start</string>
+    <string name="mirror_button_stop">Stop</string>
+    <string name="mirror_button_exit">Exit</string>
+    <string name="mirror_state_cancelled">Capture request was cancelled</string>
+    <string name="mirror_state_driving">Not available while driving</string>
+    <string name="mirror_state_inactive">Mirroring is not active</string>
+    <string name="mirror_state_requesting">Check phone for permission request</string>
+
+    <!-- Permission screen -->
+    <string name="permission_button_grant">Grant access</string>
+    <string name="permission_message_rationale">The notifications permission is required to run in the background and the vehicle speed permission is needed to prevent use while driving.</string>
+    <string name="permission_message_check_phone">Check phone for permission prompts.</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_persistent_name">Background services</string>
+    <string name="notification_channel_persistent_desc">Persistent notification for screen mirroring</string>
+    <string name="notification_mirroring_active">Screen mirroring is active</string>
+</resources>

@@ -1,0 +1,68 @@
+<!--
+    SPDX-FileCopyrightText: 2023-2024 Andrew Gunnerson
+    SPDX-License-Identifier: GPL-3.0-only
+-->
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        app:key="permissions"
+        app:title="@string/pref_header_permissions"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            app:key="missing_notifications"
+            app:persistent="false"
+            app:title="@string/pref_missing_notifications_name"
+            app:summary="@string/pref_missing_notifications_desc"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            app:key="missing_speed"
+            app:persistent="false"
+            app:title="@string/pref_missing_speed_name"
+            app:summary="@string/pref_missing_speed_desc"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/pref_header_behavior"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            app:key="auto_start"
+            app:title="@string/pref_auto_start_name"
+            app:summary="@string/pref_auto_start_desc"
+            app:iconSpaceReserved="false"
+            app:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            app:key="wake_lock"
+            app:title="@string/pref_wake_lock_name"
+            app:summary="@string/pref_wake_lock_desc"
+            app:iconSpaceReserved="false"
+            app:defaultValue="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/pref_header_about"
+        app:iconSpaceReserved="false">
+
+        <com.chiller3.mirrormobile.view.LongClickablePreference
+            app:key="version"
+            app:persistent="false"
+            app:title="@string/pref_version_name"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="debug"
+        app:title="@string/pref_header_debug"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            app:key="save_logs"
+            app:persistent="false"
+            app:title="@string/pref_save_logs_name"
+            app:summary="@string/pref_save_logs_desc"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

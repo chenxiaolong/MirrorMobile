@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 -960 960 960">
+
+    <circle fill="#43A047" cx="50%" cy="-50%" r="50%" />
+
+    <!--
+        Make this match the Android icon exactly. Android adaptive icons take the inner (centered)
+        2/3rds of the foreground's viewbox and crop out the rest [1].
+
+        ic_foreground is at 1/2 scale and then cropped to 2/3rds of the original viewbox, so it
+        takes up (1/2) / (2/3) = 3/4 of the cropped viewbox. In this SVG version, we don't crop.
+        Instead, the full size icon is scaled down to 3/4 to match.
+
+        [1] https://cs.android.com/android/platform/superproject/+/android-13.0.0_r31:frameworks/base/graphics/java/android/graphics/drawable/AdaptiveIconDrawable.java;l=106
+    -->
+
+    <g transform-origin="50% -50%" transform="scale(0.75 0.75)">
+        <g transform="translate(0 40)">
+            <path
+                fill="#ffffff"
+                d="M340-140v-80H172.31Q142-220 121-241q-21-21-21-51.31v-455.38Q100-778 121-799q21-21 51.31-21h615.38Q818-820 839-799q21 21 21 51.31v455.38Q860-262 839-241q-21 21-51.31 21H620v80H340ZM172.31-280h615.38q4.62 0 8.46-3.85 3.85-3.84 3.85-8.46v-455.38q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H172.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46v455.38q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85ZM160-280v-480 480Z" />
+        </g>
+
+        <g transform="translate(0 -20)">
+            <g transform-origin="50% -50%" transform="scale(0.6 0.6)">
+                <path
+                    fill="#ffffff"
+                    d="M224.61-220v50q0 12.75-8.62 21.37-8.63 8.63-21.38 8.63H170q-12.75 0-21.37-8.63Q140-157.25 140-170v-306.92L221.69-710q4.47-13.77 16.39-21.88Q250-740 264.62-740h432.3q14.04 0 25.5 8.25 11.45 8.25 15.89 21.75L820-476.92V-170q0 12.75-8.63 21.37Q802.75-140 790-140h-24.61q-12.75 0-21.38-8.63-8.62-8.62-8.62-21.37v-50H224.61Zm-.3-316.92h511.38L685.23-680H274.77l-50.46 143.08Zm74.24 210.77q21.83 0 37.03-15.29 15.19-15.28 15.19-37.11t-15.28-37.03q-15.29-15.19-37.12-15.19t-37.02 15.28q-15.2 15.29-15.2 37.12t15.29 37.02q15.28 15.2 37.11 15.2Zm363.08 0q21.83 0 37.02-15.29 15.2-15.28 15.2-37.11t-15.29-37.03q-15.28-15.19-37.11-15.19t-37.03 15.28q-15.19 15.29-15.19 37.12t15.28 37.02q15.29 15.2 37.12 15.2Z" />
+            </g>
+        </g>
+    </g>
+</svg>
