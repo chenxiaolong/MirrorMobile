@@ -1,10 +1,11 @@
 /*
- * SPDX-FileCopyrightText: 2024 Andrew Gunnerson
+ * SPDX-FileCopyrightText: 2024-2025 Andrew Gunnerson
  * SPDX-License-Identifier: GPL-3.0-only
  */
 
 package com.chiller3.mirrormobile.mirror
 
+import android.content.Context
 import android.content.Intent
 import android.util.Log
 import androidx.car.app.CarContext
@@ -147,7 +148,7 @@ sealed interface DisplayState {
 
         fun toStartedRequest(): DisplayState
 
-        fun tryStartMirroring(carContext: CarContext, canRequest: Boolean): DisplayState {
+        fun tryStartMirroring(activityLaunchContext: Context, canRequest: Boolean): DisplayState {
             if (captureBinder.haveCaptureSession()) {
                 Log.d(TAG, "Attaching to capture session")
 
@@ -162,8 +163,8 @@ sealed interface DisplayState {
             } else if (canRequest) {
                 Log.d(TAG, "Starting capture permission request")
 
-                carContext.startActivity(
-                    Intent(carContext, CaptureRequestActivity::class.java).apply {
+                activityLaunchContext.startActivity(
+                    Intent(activityLaunchContext, CaptureRequestActivity::class.java).apply {
                         flags = Intent.FLAG_ACTIVITY_NEW_TASK
                     }
                 )

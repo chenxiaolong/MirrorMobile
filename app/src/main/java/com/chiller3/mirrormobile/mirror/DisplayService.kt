@@ -37,6 +37,7 @@ class DisplayService : CarAppService() {
     }
 
     override fun onCreateSession(): Session = object : Session() {
-        override fun onCreateScreen(intent: Intent): Screen = DisplayScreen(carContext)
+        override fun onCreateScreen(intent: Intent): Screen =
+            DisplayScreen(carContext, this@DisplayService)
     }
 }

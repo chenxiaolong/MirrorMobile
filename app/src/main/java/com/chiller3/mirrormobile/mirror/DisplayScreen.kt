@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2024 Andrew Gunnerson
+ * SPDX-FileCopyrightText: 2024-2025 Andrew Gunnerson
  * SPDX-License-Identifier: GPL-3.0-only
  */
 
@@ -35,7 +35,8 @@ import com.chiller3.mirrormobile.Permissions
 import com.chiller3.mirrormobile.Preferences
 import com.chiller3.mirrormobile.R
 
-class DisplayScreen(carContext: CarContext) : Screen(carContext), DefaultLifecycleObserver,
+class DisplayScreen(carContext: CarContext, private val activityLaunchContext: Context) :
+    Screen(carContext), DefaultLifecycleObserver,
     SharedPreferences.OnSharedPreferenceChangeListener, ServiceConnection, CaptureService.Listener,
     SurfaceCallback, OnCarDataAvailableListener<Speed> {
     companion object {
@@ -219,7 +220,7 @@ class DisplayScreen(carContext: CarContext) : Screen(carContext), DefaultLifecyc
         Log.d(TAG, "Capture is ready")
 
         state.getTransitionOrNull(DisplayState.StartMirroring::class.java)
-            ?.tryStartMirroring(carContext, prefs.autoStart)
+            ?.tryStartMirroring(activityLaunchContext, prefs.autoStart)
             ?.let { state = it }
     }
 
@@ -286,7 +287,7 @@ class DisplayScreen(carContext: CarContext) : Screen(carContext), DefaultLifecyc
         Log.d(TAG, "Start button pressed")
 
         state = state.getTransition(DisplayState.StartMirroring::class.java)
-            .tryStartMirroring(carContext, true)
+            .tryStartMirroring(activityLaunchContext, true)
     }
 
     private fun onStopPressed() {
