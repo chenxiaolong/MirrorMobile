@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2023-2024 Andrew Gunnerson
+ * SPDX-FileCopyrightText: 2023-2025 Andrew Gunnerson
  * SPDX-License-Identifier: GPL-3.0-only
  */
 
@@ -7,7 +7,6 @@ import org.eclipse.jgit.api.ArchiveCommand
 import org.eclipse.jgit.api.Git
 import org.eclipse.jgit.archive.TarFormat
 import org.eclipse.jgit.lib.ObjectId
-import org.jetbrains.kotlin.backend.common.pop
 
 plugins {
     alias(libs.plugins.android.application)
@@ -16,7 +15,7 @@ plugins {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
 }
 
@@ -35,8 +34,8 @@ fun describeVersion(git: Git): VersionTriple {
 
     return if (describeStr != null) {
         val pieces = describeStr.split('-').toMutableList()
-        val commit = git.repository.resolve(pieces.pop().substring(1))
-        val count = pieces.pop().toInt()
+        val commit = git.repository.resolve(pieces.removeLast().substring(1))
+        val count = pieces.removeLast().toInt()
         val tag = pieces.joinToString("-")
 
         Triple(tag, count, commit)
@@ -103,7 +102,6 @@ val gitVersionCode = getVersionCode(gitVersionTriple)
 val gitVersionName = getVersionName(git, gitVersionTriple)
 
 val projectUrl = "https://github.com/chenxiaolong/MirrorMobile"
-val releaseMetadataBranch = "master"
 
 val extraDir = layout.buildDirectory.map { it.dir("extra") }
 val archiveDir = extraDir.map { it.dir("archive") }
@@ -156,11 +154,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility(JavaVersion.VERSION_17)
-        targetCompatibility(JavaVersion.VERSION_17)
+        sourceCompatibility(JavaVersion.VERSION_21)
+        targetCompatibility(JavaVersion.VERSION_21)
     }
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = "21"
     }
     buildFeatures {
         buildConfig = true

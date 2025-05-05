@@ -1,14 +1,14 @@
 [versions]
-activity-ktx = "1.9.3"
-android-gradle-plugin = "8.7.2"
+activity-ktx = "1.10.1"
+android-gradle-plugin = "8.9.2"
 appcompat = "1.7.0"
 # 1.4.0 is missing the proper proguard rules for MapWithContentTemplate, causing the default
 # constructor to be removed (which is called by reflection).
-car = "1.7.0-beta03"
-core-ktx = "1.15.0"
-jgit = "7.0.0.202409031743-r"
-fragment-ktx = "1.8.5"
-kotlin = "2.0.21"
+car = "1.7.0-rc01"
+core-ktx = "1.16.0"
+jgit = "7.2.0.202503040940-r"
+fragment-ktx = "1.8.6"
+kotlin = "2.1.20"
 material = "1.12.0"
 preference-ktx = "1.2.1"
 

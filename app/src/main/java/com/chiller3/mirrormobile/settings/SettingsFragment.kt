@@ -6,9 +6,9 @@
 package com.chiller3.mirrormobile.settings
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.net.toUri
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -140,7 +140,7 @@ class SettingsFragment : PreferenceBaseFragment(), Preference.OnPreferenceClickL
                 return true
             }
             preference === prefVersion -> {
-                val uri = Uri.parse(BuildConfig.PROJECT_URL_AT_COMMIT)
+                val uri = BuildConfig.PROJECT_URL_AT_COMMIT.toUri()
                 startActivity(Intent(Intent.ACTION_VIEW, uri))
                 return true
             }
