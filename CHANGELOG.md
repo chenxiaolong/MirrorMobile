@@ -7,7 +7,7 @@
     to update the actual links at the bottom of the file.
 -->
 
-### Unreleased
+### Version 1.1
 
 * Update dependencies ([PR #2])
 * Work around issue where screen capture permission prompt won't show on newer versions of Android or Android Auto ([PR #3])
