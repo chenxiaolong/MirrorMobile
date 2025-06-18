@@ -7,6 +7,10 @@
     to update the actual links at the bottom of the file.
 -->
 
+### Unreleased
+
+* Properly fix the launching of the screen capture permission prompt ([PR #4])
+
 ### Version 1.1
 
 * Update dependencies ([PR #2])
@@ -19,3 +23,4 @@
 <!-- Do not manually edit the lines below. Use `./gradlew changelogUpdateLinks` to regenerate. -->
 [PR #2]: https://github.com/chenxiaolong/MirrorMobile/pull/2
 [PR #3]: https://github.com/chenxiaolong/MirrorMobile/pull/3
+[PR #4]: https://github.com/chenxiaolong/MirrorMobile/pull/4
