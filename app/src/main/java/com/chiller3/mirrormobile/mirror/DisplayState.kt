@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2024 Andrew Gunnerson
+ * SPDX-FileCopyrightText: 2024-2025 Andrew Gunnerson
  * SPDX-License-Identifier: GPL-3.0-only
  */
 
@@ -7,8 +7,10 @@ package com.chiller3.mirrormobile.mirror
 
 import android.content.Intent
 import android.util.Log
+import android.view.Display
 import androidx.car.app.CarContext
 import androidx.car.app.SurfaceContainer
+import androidx.core.app.ActivityOptionsCompat
 
 /**
  * This implements a state machine for [DisplayScreen] to clearly express what the valid states are,
@@ -165,7 +167,11 @@ sealed interface DisplayState {
                 carContext.startActivity(
                     Intent(carContext, CaptureRequestActivity::class.java).apply {
                         flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                    }
+                    },
+                    ActivityOptionsCompat
+                        .makeBasic()
+                        .setLaunchDisplayId(Display.DEFAULT_DISPLAY)
+                        .toBundle(),
                 )
 
                 return toStartedRequest()
