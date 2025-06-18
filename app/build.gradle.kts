@@ -109,13 +109,13 @@ val archiveDir = extraDir.map { it.dir("archive") }
 android {
     namespace = "com.chiller3.mirrormobile"
 
-    compileSdk = 35
-    buildToolsVersion = "35.0.0"
+    compileSdk = 36
+    buildToolsVersion = "36.0.0"
 
     defaultConfig {
         applicationId = "com.chiller3.mirrormobile"
         minSdk = 29
-        targetSdk = 35
+        targetSdk = 36
         versionCode = gitVersionCode
         versionName = gitVersionName
 

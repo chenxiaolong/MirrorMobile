@@ -63,7 +63,7 @@ abstract class PreferenceBaseActivity : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(showUpButton)
 
         actionBarTitle?.let {
-            setTitle(it)
+            title = it
         }
     }
 
