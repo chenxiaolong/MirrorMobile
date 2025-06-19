@@ -10,6 +10,7 @@
 ### Unreleased
 
 * Properly fix the launching of the screen capture permission prompt ([PR #4])
+* Update dependencies and target API 36 ([PR #5])
 
 ### Version 1.1
 
@@ -24,3 +25,4 @@
 [PR #2]: https://github.com/chenxiaolong/MirrorMobile/pull/2
 [PR #3]: https://github.com/chenxiaolong/MirrorMobile/pull/3
 [PR #4]: https://github.com/chenxiaolong/MirrorMobile/pull/4
+[PR #5]: https://github.com/chenxiaolong/MirrorMobile/pull/5
