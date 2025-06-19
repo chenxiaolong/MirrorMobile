@@ -7,7 +7,7 @@
     to update the actual links at the bottom of the file.
 -->
 
-### Unreleased
+### Version 1.2
 
 * Properly fix the launching of the screen capture permission prompt ([PR #4])
 * Update dependencies and target API 36 ([PR #5])
