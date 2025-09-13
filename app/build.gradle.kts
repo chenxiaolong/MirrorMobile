@@ -164,6 +164,10 @@ android {
         buildConfig = true
         viewBinding = true
     }
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
 }
 
 dependencies {
