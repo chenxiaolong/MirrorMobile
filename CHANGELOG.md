@@ -7,6 +7,10 @@
     to update the actual links at the bottom of the file.
 -->
 
+### Unreleased
+
+* Remove dependency info block from APK ([PR #6])
+
 ### Version 1.2
 
 * Properly fix the launching of the screen capture permission prompt ([PR #4])
@@ -26,3 +30,4 @@
 [PR #3]: https://github.com/chenxiaolong/MirrorMobile/pull/3
 [PR #4]: https://github.com/chenxiaolong/MirrorMobile/pull/4
 [PR #5]: https://github.com/chenxiaolong/MirrorMobile/pull/5
+[PR #6]: https://github.com/chenxiaolong/MirrorMobile/pull/6
