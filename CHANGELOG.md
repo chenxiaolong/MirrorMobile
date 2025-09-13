@@ -10,6 +10,7 @@
 ### Unreleased
 
 * Remove dependency info block from APK ([PR #6])
+* Update dependencies ([PR #7])
 
 ### Version 1.2
 
@@ -31,3 +32,4 @@
 [PR #4]: https://github.com/chenxiaolong/MirrorMobile/pull/4
 [PR #5]: https://github.com/chenxiaolong/MirrorMobile/pull/5
 [PR #6]: https://github.com/chenxiaolong/MirrorMobile/pull/6
+[PR #7]: https://github.com/chenxiaolong/MirrorMobile/pull/7
