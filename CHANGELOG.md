@@ -7,6 +7,10 @@
     to update the actual links at the bottom of the file.
 -->
 
+### Unreleased
+
+* Update AGP to 9.0.0 ([PR #8])
+
 ### Version 1.3
 
 * Remove dependency info block from APK ([PR #6])
@@ -33,3 +37,4 @@
 [PR #5]: https://github.com/chenxiaolong/MirrorMobile/pull/5
 [PR #6]: https://github.com/chenxiaolong/MirrorMobile/pull/6
 [PR #7]: https://github.com/chenxiaolong/MirrorMobile/pull/7
+[PR #8]: https://github.com/chenxiaolong/MirrorMobile/pull/8
