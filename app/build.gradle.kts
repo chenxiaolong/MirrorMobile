@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2023-2025 Andrew Gunnerson
+ * SPDX-FileCopyrightText: 2023-2026 Andrew Gunnerson
  * SPDX-License-Identifier: GPL-3.0-only
  */
 
@@ -7,10 +7,10 @@ import org.eclipse.jgit.api.ArchiveCommand
 import org.eclipse.jgit.api.Git
 import org.eclipse.jgit.archive.TarFormat
 import org.eclipse.jgit.lib.ObjectId
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
 }
 
 java {
@@ -124,13 +124,6 @@ android {
         buildConfigField("String", "PROJECT_URL_AT_COMMIT",
             "\"${projectUrl}/tree/${gitVersionTriple.third.name}\"")
     }
-    sourceSets {
-        getByName("main") {
-            assets {
-                srcDir(archiveDir)
-            }
-        }
-    }
     signingConfigs {
         create("release") {
             val keystore = System.getenv("RELEASE_KEYSTORE")
@@ -157,9 +150,6 @@ android {
         sourceCompatibility(JavaVersion.VERSION_21)
         targetCompatibility(JavaVersion.VERSION_21)
     }
-    kotlinOptions {
-        jvmTarget = "21"
-    }
     buildFeatures {
         buildConfig = true
         viewBinding = true
@@ -167,6 +157,20 @@ android {
     dependenciesInfo {
         includeInApk = false
         includeInBundle = false
+    }
+}
+
+androidComponents.onVariants { variant ->
+    variant.sources.assets!!.addGeneratedSourceDirectory(archive) {
+        project.objects.directoryProperty().apply {
+            set(archiveDir)
+        }
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_21
     }
 }
 
@@ -205,10 +209,8 @@ val archive = tasks.register("archive") {
     }
 }
 
-android.applicationVariants.all {
-    preBuildProvider.configure {
-        dependsOn(archive)
-    }
+androidComponents.onVariants { variant ->
+    variant.lifecycleTasks.registerPreBuild(archive)
 }
 
 data class LinkRef(val type: String, val number: Int) : Comparable<LinkRef> {
@@ -324,10 +326,10 @@ tasks.register("changelogUpdateLinks") {
 }
 
 tasks.register("changelogPreRelease") {
-    doLast {
-        val version = project.property("releaseVersion")
+    val version = project.findProperty("releaseVersion")
 
-        updateChangelog(version.toString(), true)
+    doLast {
+        updateChangelog(version!!.toString(), true)
     }
 }
 
