@@ -10,7 +10,7 @@
 ### Unreleased
 
 * Update AGP to 9.0.0 ([PR #8])
-* Reenable default proguard optimizations ([PR #9])
+* Reenable default proguard optimizations ([PR #9], [PR #10])
   * For folks who want to decode stack traces from log files, the mapping files are now included with the official releases in `mappings.tar.zst`
 
 ### Version 1.3
@@ -41,3 +41,4 @@
 [PR #7]: https://github.com/chenxiaolong/MirrorMobile/pull/7
 [PR #8]: https://github.com/chenxiaolong/MirrorMobile/pull/8
 [PR #9]: https://github.com/chenxiaolong/MirrorMobile/pull/9
+[PR #10]: https://github.com/chenxiaolong/MirrorMobile/pull/10
