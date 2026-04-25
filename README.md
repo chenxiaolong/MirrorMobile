@@ -2,9 +2,6 @@
 
 <img src="app/images/icon.svg" alt="app icon" width="72" />
 
-![latest release badge](https://img.shields.io/github/v/release/chenxiaolong/MirrorMobile?sort=semver)
-![license badge](https://img.shields.io/github/license/chenxiaolong/MirrorMobile)
-
 MirrorMobile (pun intended) is a simple app for mirroring an Android device's screen to Android Auto. It tries to turn the vehicle's display into a plain old monitor. Input via the car's touchscreen is not supported.
 
 **NOTE**: This is a personal project. I will not add workarounds that aren't needed for my Android device and car.
@@ -118,6 +115,6 @@ New features are currently not accepted. I don't want MirrorMobile to do anythin
 
 ## License
 
-MirrorMobile is licensed under GPLv3. Please see [`LICENSE`](./LICENSE) for the full license text.
+MirrorMobile is licensed under GPL-3.0-only. Please see [`LICENSE`](./LICENSE) for the full license text.
 
 Unlike similar projects, MirrorMobile does not use the leaked proprietary Android Auto SDK. All dependencies are fully open source.
