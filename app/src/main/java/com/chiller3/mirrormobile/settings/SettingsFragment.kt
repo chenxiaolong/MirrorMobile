@@ -23,11 +23,12 @@ import com.chiller3.mirrormobile.Preferences
 import com.chiller3.mirrormobile.R
 import com.chiller3.mirrormobile.extension.formattedString
 import com.chiller3.mirrormobile.view.LongClickablePreference
+import com.chiller3.mirrormobile.view.OnPreferenceLongClickListener
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.launch
 
 class SettingsFragment : PreferenceBaseFragment(), Preference.OnPreferenceClickListener,
-    LongClickablePreference.OnPreferenceLongClickListener {
+    OnPreferenceLongClickListener {
     private val viewModel: SettingsViewModel by viewModels()
 
     private lateinit var prefs: Preferences
