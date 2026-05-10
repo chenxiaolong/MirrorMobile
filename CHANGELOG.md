@@ -13,6 +13,7 @@
 * Reenable default proguard optimizations ([PR #9], [PR #10])
   * For folks who want to decode stack traces from log files, the mapping files are now included with the official releases in `mappings.tar.zst`
 * Minor bug fix for long-clickable preferences ([PR #11])
+* Fix titles of switch preferences being truncated when they don't fit ([PR #12])
 
 ### Version 1.3
 
@@ -44,3 +45,4 @@
 [PR #9]: https://github.com/chenxiaolong/MirrorMobile/pull/9
 [PR #10]: https://github.com/chenxiaolong/MirrorMobile/pull/10
 [PR #11]: https://github.com/chenxiaolong/MirrorMobile/pull/11
+[PR #12]: https://github.com/chenxiaolong/MirrorMobile/pull/12
