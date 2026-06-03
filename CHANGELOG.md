@@ -9,9 +9,10 @@
 
 ### Unreleased
 
+* Port UI to Jetpack Compose and adopt Material 3 Expressive styling ([PR #13])
 * Update AGP to 9.0.0 ([PR #8])
 * Reenable default proguard optimizations ([PR #9], [PR #10])
-  * For folks who want to decode stack traces from log files, the mapping files are now included with the official releases in `mappings.tar.zst`
+  * For folks who want to decode stack traces from log files, the mapping file is now included with the official releases in `mappings.txt.zst`
 * Minor bug fix for long-clickable preferences ([PR #11])
 * Fix titles of switch preferences being truncated when they don't fit ([PR #12])
 
@@ -46,3 +47,4 @@
 [PR #10]: https://github.com/chenxiaolong/MirrorMobile/pull/10
 [PR #11]: https://github.com/chenxiaolong/MirrorMobile/pull/11
 [PR #12]: https://github.com/chenxiaolong/MirrorMobile/pull/12
+[PR #13]: https://github.com/chenxiaolong/MirrorMobile/pull/13
