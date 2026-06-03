@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2023-2024 Andrew Gunnerson
+ * SPDX-FileCopyrightText: 2023-2026 Andrew Gunnerson
  * SPDX-License-Identifier: GPL-3.0-only
  */
 
@@ -7,7 +7,6 @@ package com.chiller3.mirrormobile
 
 import android.app.Application
 import android.util.Log
-import com.google.android.material.color.DynamicColors
 import java.io.File
 
 class MainApplication : Application() {
@@ -33,8 +32,5 @@ class MainApplication : Application() {
         }
 
         Notifications(this).updateChannels()
-
-        // Enable Material You colors
-        DynamicColors.applyToActivitiesIfAvailable(this)
     }
 }

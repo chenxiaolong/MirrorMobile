@@ -1,17 +1,25 @@
 /*
- * SPDX-FileCopyrightText: 2023-2024 Andrew Gunnerson
+ * SPDX-FileCopyrightText: 2023-2026 Andrew Gunnerson
  * SPDX-License-Identifier: GPL-3.0-only
  */
 
 package com.chiller3.mirrormobile.settings
 
-import com.chiller3.mirrormobile.PreferenceBaseActivity
-import com.chiller3.mirrormobile.PreferenceBaseFragment
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import com.chiller3.mirrormobile.ui.theme.AppTheme
 
-class SettingsActivity : PreferenceBaseActivity() {
-    override val actionBarTitle: CharSequence? = null
+class SettingsActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
 
-    override val showUpButton: Boolean = false
-
-    override fun createFragment(): PreferenceBaseFragment = SettingsFragment()
+        setContent {
+            AppTheme {
+                SettingsScreen()
+            }
+        }
+    }
 }

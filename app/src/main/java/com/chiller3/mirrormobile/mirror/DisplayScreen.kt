@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2024 Andrew Gunnerson
+ * SPDX-FileCopyrightText: 2024-2026 Andrew Gunnerson
  * SPDX-License-Identifier: GPL-3.0-only
  */
 
@@ -54,7 +54,7 @@ class DisplayScreen(carContext: CarContext) : Screen(carContext), DefaultLifecyc
 
     init {
         lifecycle.addObserver(this)
-        prefs.prefs.registerOnSharedPreferenceChangeListener(this)
+        prefs.registerListener(this)
     }
 
     @ExperimentalCarApi
@@ -167,7 +167,7 @@ class DisplayScreen(carContext: CarContext) : Screen(carContext), DefaultLifecyc
 
         appManager.setSurfaceCallback(null)
 
-        prefs.prefs.unregisterOnSharedPreferenceChangeListener(this)
+        prefs.unregisterListener(this)
 
         lifecycle.removeObserver(this)
     }

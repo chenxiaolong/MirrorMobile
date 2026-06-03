@@ -1,5 +1,5 @@
 <!--
-    SPDX-FileCopyrightText: 2024 Andrew Gunnerson
+    SPDX-FileCopyrightText: 2024-2026 Andrew Gunnerson
     SPDX-License-Identifier: GPL-3.0-only
 -->
 <resources>
@@ -25,6 +25,8 @@
     <!-- Main alerts -->
     <string name="alert_logcat_success">Successfully saved logs to %1$s</string>
     <string name="alert_logcat_failure">Failed to save logs to %1$s: %2$s</string>
+    <string name="alert_browser_not_found">No web browser is available.</string>
+    <string name="alert_documentsui_not_found">Android\'s builtin file manager (DocumentsUI) is unavailable.</string>
 
     <!-- Mirror screen -->
     <string name="mirror_bottom_unavailable">…</string>
