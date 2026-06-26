@@ -7,6 +7,10 @@
     to update the actual links at the bottom of the file.
 -->
 
+### Unreleased
+
+* Update target API version to API 37 (Android 17) ([PR #14])
+
 ### Version 2.0
 
 * Port UI to Jetpack Compose and adopt Material 3 Expressive styling ([PR #13])
@@ -48,3 +52,4 @@
 [PR #11]: https://github.com/chenxiaolong/MirrorMobile/pull/11
 [PR #12]: https://github.com/chenxiaolong/MirrorMobile/pull/12
 [PR #13]: https://github.com/chenxiaolong/MirrorMobile/pull/13
+[PR #14]: https://github.com/chenxiaolong/MirrorMobile/pull/14
