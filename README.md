@@ -1,3 +1,5 @@
+**2026-09-09 update**: This project is no longer in development since I never once actually used the app in my car outside of testing. It was fun to write the app, but I have no interest in maintaining it anymore.
+
 # MirrorMobile
 
 <img src="app/images/icon.svg" alt="app icon" width="72" />
